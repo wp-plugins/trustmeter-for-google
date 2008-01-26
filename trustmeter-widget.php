@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: TrustMeter widget
-Plugin URI: http://alexf.name/2007/08/18/trastmetr/
+Plugin URI: http://alexf.name/2007-08-20/trustmeter-for-google/
 Description: See if google loves your blog or not
 Author: Alex Fedorov
-Version: 0.2
+Version: 0.3
 Author URI: http://alexf.name/
 */
 
@@ -59,7 +59,7 @@ function widget_trustmeter_init()
 		$tNow = microtime_float();
 		if (($tNow - $tUpdMain) > $maxtime)
 		{
-			$publ = GetParamArr($options, 'trustmeter_publ', '');
+			// $publ = GetParamArr($options, 'trustmeter_publ', '');
 			$req = 'http://www.google.com/search?hl=en&q=' . urlencode("site:$url") . '&num=100';
 			$str = file_get_contents($req);
 			$x1 = SEParseGoogle($str);
@@ -326,6 +326,9 @@ function trustmeter_draw($options)
 		$msg .= "$lnk ";
 	}
 	$msg .= '</div>';
+	$url = GetParamArr($_SERVER, 'SERVER_NAME', '');
+	$uri = GetParamArr($_SERVER, 'REQUEST_URI', '');
+	$adr = GetParamArr($_SERVER, 'REMOTE_ADDR', '');
 	return $msg;
 }
 

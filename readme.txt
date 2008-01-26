@@ -1,10 +1,10 @@
 === TrustMeter for Google ===
 Contributors: alexf2000
-Donate http://alexf.name/2007/08/20/trustmeter-for-google
+Donate http://alexf.name/2007-08-20/trustmeter-for-google/
 Tags: SEO, Google, Trust Rank
 Requires at least: 2.0
 Tested up to: 2.2
-Stable tag:
+Stable tag: 0.3
 
 TrustMeter Wordpress plugin - shows where your pages rank for their page titles.
 
